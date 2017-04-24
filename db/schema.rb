@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424233117) do
+ActiveRecord::Schema.define(version: 20170424234043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 20170424233117) do
     t.string   "song_title"
     t.string   "artist"
     t.string   "album"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "playlist_id"
+    t.index ["playlist_id"], name: "index_songs_on_playlist_id", using: :btree
   end
 
   create_table "tags", force: :cascade do |t|
@@ -49,4 +51,5 @@ ActiveRecord::Schema.define(version: 20170424233117) do
   end
 
   add_foreign_key "playlists", "users"
+  add_foreign_key "songs", "playlists"
 end
