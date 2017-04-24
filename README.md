@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### Description  
+The app is a database of user playlists. The intention is to have a receptacle for referencing existing music and discovering new music.
 
-Things you may want to cover:
+##### Technology Implemented
+* Ruby
+* Ruby on Rails
 
-* Ruby version
+##### Getting Started  
+The app is located at XXX. You may browse as an anonymous user or join to create, edit, and tag playlists.  
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### Next Steps  
+###### Issues:  
+* wireframe  
+* styling  
+###### Planned Features
+* Ordering within lists
