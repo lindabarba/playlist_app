@@ -1,2 +1,19 @@
-<h1>Playlists#new</h1>
-<p>Find me in app/views/playlists/new.html.erb</p>
+<h1>Add new playlist</h1>
+
+<div>
+<%= form_for [@user, @playlist], html: { multipart: true } do |form| %>
+   <%= form.label :playlist_title %>
+   <%= form.text_field :playlist_title %><br>
+
+   <%= form.label :song_title %>
+   <%= form.text_field :song_title %><br>
+
+   <%= form.label :song_position %>
+   <%= form.integer :song_position %><br>
+
+   <%= form.label :team_id %>
+   <%= form.collection_select(:team_id, Team.all, :id, :team_name, prompt: true) %><br>
+
+   <%= form.submit "Done" %>
+<% end %>
+</div>

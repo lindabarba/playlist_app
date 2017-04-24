@@ -1,2 +1,10 @@
-<h1>Playlists#index</h1>
-<p>Find me in app/views/playlists/index.html.erb</p>
+<h1>Playlists</h1>
+
+<% @playlists.each do |playlist| %>
+<tr>
+  <td><%= playlist.playlist_title %></td>&nbsp;&nbsp;
+  <td><%= playlist.created_at %></td>&nbsp;&nbsp;
+  <td><%= playlist.updated_at %></td><br>
+  <!-- add playlist tags here once relationships established -->
+</tr>
+<% end %>
