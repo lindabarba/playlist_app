@@ -11,9 +11,6 @@
    <%= form.label :song_position %>
    <%= form.integer :song_position %><br>
 
-   <%= form.label :team_id %>
-   <%= form.collection_select(:team_id, Team.all, :id, :team_name, prompt: true) %><br>
-
    <%= form.submit "Done" %>
 <% end %>
 </div>
